@@ -4,16 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Drag And Drop Todo</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header>
-      <h2 class="container">Todo</h2>
+      <h1>Todo</h1>
     </header>
-    <div class="container">
-      <form id="todo-form-view">
-        <input type="text" placeholder="Todo를 입력하세요" autofocus />
-      </form>
+    <div id="todo-form-view" class="input-box shadow">
+      <input type="text" placeholder="Todo를 입력하세요" autofocus />
+      <span class="add-container">
+        <i class="fas fa-plus"></i>
+      </span>
     </div>
     <script type="module" src="./src/index.js"></script>
   </body>

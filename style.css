@@ -1,34 +1,52 @@
-body,
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  list-style: none;
-}
-
-header {
-  border-bottom: 1px #ccc solid;
-  padding: 15px 0 15px 0;
+body {
   text-align: center;
+  background-color: #f6f6f6;
 }
 
-.container {
-  margin: 0 15px 0 15px;
+input {
+  border-style: groove;
+  width: 80%;
 }
 
-form {
-  position: relative;
+button {
+  border-style: groove;
 }
 
-input[type='text'] {
+.shadow {
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.03);
+}
+
+h1 {
+  color: #2f3b52;
+  font-weight: 900;
+  margin: 2.5rem 0 1.5rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+.input-box {
+  background: white;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+}
+
+.input-box input {
+  border-style: none;
+  font-size: 0.9rem;
+}
+
+.add-container {
+  float: right;
+  background: linear-gradient(to right, #6478fb, #8763fb);
   display: block;
-  box-sizing: border-box;
-  width: 100%;
-  margin: 15px 0 15px 0;
-  padding: 10px 15px;
-  font-size: 14px;
-  line-height: 1.5;
-  border: 1px solid #cccccc;
+  width: 3rem;
+  border-radius: 0 5px 5px 0;
+}
+
+.add-btn {
+  color: white;
+  vertical-align: middle;
 }
