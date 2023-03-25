@@ -19,3 +19,6 @@
 
 - [x] 각 ToDo는 Draggble이 가능하다.
 - [x] 각 ToDo는 `dragstart` 이벤트를 감지한다.
+- [x] 각 ToDo는 `dragover` 이벤트를 감지한다.
+  - [ ] 각 `dragstart` 이벤트의 기본 동작을 막는다.
+- [ ] 각 ToDO는 `dragdrop` 이벤트를 감지한다.
