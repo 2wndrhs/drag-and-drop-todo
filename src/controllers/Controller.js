@@ -8,9 +8,14 @@ export default class Controller {
   }
 
   subscribeViewEvents() {
-    this.todoFormView.on('@submit', (event) =>
-      this.addTodo(event.detail.value),
-    );
+    this.todoFormView.on('@submit', (event) => {
+      this.clearTodoInputForm();
+      this.addTodo(event.detail.value);
+    });
+  }
+
+  clearTodoInputForm() {
+    this.todoFormView.inputElement.value = '';
   }
 
   addTodo(todo) {
