@@ -5,6 +5,7 @@ export default class View {
     if (!element) throw new Error('no element');
 
     this.element = element;
+    this.originalDisplay = this.element.style.display || '';
   }
 
   on(eventName, handler) {
@@ -14,6 +15,11 @@ export default class View {
 
   emit(eventName, data) {
     emit(this.element, eventName, data);
+    return this;
+  }
+
+  show() {
+    this.element.style.display = this.originalDisplay;
     return this;
   }
 }

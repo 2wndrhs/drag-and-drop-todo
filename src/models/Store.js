@@ -4,18 +4,22 @@ export default class Store {
 
     this.storage = storage;
 
-    this.todoItems = this.fetchTodoItems();
-    console.log(this.todoItems);
+    this.todos = this.fetchTodos();
+    console.log(this.todos);
   }
 
-  fetchTodoItems() {
-    const toTodoItem = (_, index) =>
+  fetchTodos() {
+    const toTodo = (_, index) =>
       JSON.parse(this.storage.getItem(this.storage.key(index)));
 
-    return Array.from({ length: this.storage.length }).map(toTodoItem);
+    return Array.from({ length: this.storage.length }).map(toTodo);
   }
 
-  addTodoItem(todo) {
+  getTodos() {
+    return this.todos;
+  }
+
+  addOneItem(todo) {
     const todoInfo = { completed: false, item: todo };
     this.storage.setItem(todo, JSON.stringify(todoInfo));
   }
