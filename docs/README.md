@@ -7,4 +7,4 @@
 
 ## Todo 출력폼 구현
 
-- [ ] `localStorage`에 저장되어 있는 `TodoItems`를 받아온다.
+- [x] `localStorage`에 저장되어 있는 `TodoItems`를 받아온다.
