@@ -21,4 +21,5 @@
 - [x] 각 ToDo는 `dragstart` 이벤트를 감지한다.
 - [x] 각 ToDo는 `dragover` 이벤트를 감지한다.
   - [x] 각 `dragstart` 이벤트의 기본 동작을 막는다.
-- [x] 각 ToDO는 `dragdrop` 이벤트를 감지한다.
+- [x] 각 ToDo는 `dragdrop` 이벤트를 감지한다.
+- [ ] `dragstart`인 ToDo와 `dragdrop`인 Todo를 이용해 Todo 리스트를 업데이트한다.
