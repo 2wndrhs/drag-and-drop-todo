@@ -1,11 +1,14 @@
 import Controller from './controllers/Controller.js';
 import Store from './models/Store.js';
-import storage from './models/storage.js';
+import TodoFormView from './views/TodoFormView.js';
 
 function main() {
-  const store = new Store(storage);
+  // 로컬 스토리지 주입
+  const store = new Store(localStorage);
 
-  const views = {};
+  const views = {
+    todoFormView: new TodoFormView(),
+  };
 
   new Controller(store, views);
 }

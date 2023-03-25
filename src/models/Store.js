@@ -14,4 +14,8 @@ export default class Store {
 
     return Array.from({ length: this.storage.length }).map(toTodoItem);
   }
+
+  addTodoItem(todo) {
+    this.storage.setItem(todo, todo);
+  }
 }
