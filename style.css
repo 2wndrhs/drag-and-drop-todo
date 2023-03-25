@@ -17,3 +17,18 @@ header {
 .container {
   margin: 0 15px 0 15px;
 }
+
+form {
+  position: relative;
+}
+
+input[type='text'] {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 15px 0 15px 0;
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid #cccccc;
+}
