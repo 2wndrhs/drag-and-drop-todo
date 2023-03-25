@@ -8,7 +8,7 @@ const Template = Object.freeze({
 
   getTodoItem(todo) {
     return `
-    <li class="shadow list-view" draggable="true">
+    <li data-draggable="${todo.item}" class="shadow list-view" draggable="true">
       <span>${todo.item}</span>
       <span data-todo="${todo.item}" class="remove-btn">
         <i class="fas fa-times"></i>
@@ -29,12 +29,22 @@ export default class TodoListView extends View {
     delegate(this.element, 'click', '.remove-btn', (event) =>
       this.handleClickRemoveButton(event),
     );
+
+    delegate(this.element, 'dragstart', '.list-view', (event) =>
+      this.handleDragStart(event),
+    );
   }
 
   handleClickRemoveButton(event) {
     const value = event.target.dataset.todo;
 
     this.emit('@remove', { value });
+  }
+
+  handleDragStart(event) {
+    const value = event.target.dataset.draggable;
+
+    this.emit('@dragstart', { value });
   }
 
   show(todos = []) {

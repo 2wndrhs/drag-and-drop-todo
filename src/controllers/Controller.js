@@ -16,10 +16,14 @@ export default class Controller {
       this.render();
     });
 
-    this.todoListView.on('@remove', (event) => {
-      this.removeTodo(event.detail.value);
-      this.render();
-    });
+    this.todoListView
+      .on('@remove', (event) => {
+        this.removeTodo(event.detail.value);
+        this.render();
+      })
+      .on('@dragstart', (event) => {
+        console.log(event.detail.value);
+      });
   }
 
   render() {

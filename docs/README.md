@@ -18,4 +18,4 @@
 ## Draggable 구현
 
 - [x] 각 ToDo는 Draggble이 가능하다.
-- [ ] 각 ToDo는 `dragstart` 이벤트를 감지한다.
+- [x] 각 ToDo는 `dragstart` 이벤트를 감지한다.
