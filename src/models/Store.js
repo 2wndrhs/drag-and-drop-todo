@@ -17,5 +17,6 @@ export default class Store {
 
   addTodoItem(todo) {
     this.storage.setItem(todo, todo);
+    console.log(todo);
   }
 }
