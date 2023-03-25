@@ -23,4 +23,4 @@
   - [x] 각 `dragstart` 이벤트의 기본 동작을 막는다.
 - [x] 각 ToDo는 `dragdrop` 이벤트를 감지한다.
 - [x] `dragstart`인 ToDo와 `dragdrop`인 Todo를 이용해 Todo 리스트를 업데이트한다.
-- [ ] 업데이트한 Todo 리스트를 로컬 저장소에 반영한다.
+- [x] 업데이트한 Todo 리스트를 로컬 저장소에 반영한다.

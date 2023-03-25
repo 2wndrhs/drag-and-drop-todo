@@ -61,5 +61,9 @@ export default class Store {
       acc.push(todo);
       return acc;
     }, []);
+    this.storage.clear();
+    this.todos.forEach((todo) => {
+      this.storage.setItem(todo.item, JSON.stringify(todo));
+    });
   }
 }
