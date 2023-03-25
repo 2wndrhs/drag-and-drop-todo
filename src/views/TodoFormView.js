@@ -20,13 +20,15 @@ export default class TodoFormView extends View {
     const enter = 13;
     const { value } = this.inputElement;
 
-    if (event.keyCode !== enter) return;
+    if (!value.length || event.keyCode !== enter) return;
 
     this.emit('@submit', { value });
   }
 
   handleClick() {
     const { value } = this.inputElement;
+
+    if (!value.length) return;
 
     this.emit('@submit', { value });
   }
