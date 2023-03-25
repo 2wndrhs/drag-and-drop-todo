@@ -13,6 +13,7 @@ export default class Controller {
     this.todoFormView.on('@submit', (event) => {
       this.clearTodoInputForm();
       this.addTodo(event.detail.value);
+      this.render();
     });
 
     this.todoListView.on('@remove', (event) => {
