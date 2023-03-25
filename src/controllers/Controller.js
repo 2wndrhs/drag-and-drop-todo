@@ -23,6 +23,9 @@ export default class Controller {
       })
       .on('@dragstart', (event) => {
         console.log(event.detail.value);
+      })
+      .on('@dragdrop', (event) => {
+        console.log(event.detail.value);
       });
   }
 

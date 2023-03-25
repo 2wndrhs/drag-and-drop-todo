@@ -33,6 +33,14 @@ export default class TodoListView extends View {
     delegate(this.element, 'dragstart', '.list-view', (event) =>
       this.handleDragStart(event),
     );
+
+    delegate(this.element, 'dragover', '.list-view', (event) =>
+      this.handleDragOver(event),
+    );
+
+    delegate(this.element, 'drop', '.list-view', (event) =>
+      this.handleDragDrop(event),
+    );
   }
 
   handleClickRemoveButton(event) {
@@ -45,6 +53,16 @@ export default class TodoListView extends View {
     const value = event.target.dataset.draggable;
 
     this.emit('@dragstart', { value });
+  }
+
+  handleDragOver(event) {
+    event.preventDefault();
+  }
+
+  handleDragDrop(event) {
+    const value = event.target.dataset.draggable;
+
+    this.emit('@dragdrop', { value });
   }
 
   show(todos = []) {
