@@ -8,5 +8,6 @@
 
 ## Todo 리스트 구현
 
-- [x] `localStorage`에 저장되어 있는 `TodoItems`를 받아온다.
 - [ ] Todo 리스트는 Todo 입력 폼 아래 위치한다.
+- [x] `localStorage`에 저장되어 있는 `Todos`를 받아온다.
+- [ ] 받아온 `Todos`를 Todo 리스트에 출력한다.
