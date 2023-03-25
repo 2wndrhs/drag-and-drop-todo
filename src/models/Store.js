@@ -26,7 +26,9 @@ export default class Store {
   }
 
   removeOneItem(todo) {
-    console.log(todo);
     this.storage.removeItem(todo);
+
+    const isNotRemovedTodo = (todoInfo) => todoInfo.item !== todo;
+    this.todos = this.todos.filter(isNotRemovedTodo);
   }
 }

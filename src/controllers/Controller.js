@@ -18,6 +18,7 @@ export default class Controller {
 
     this.todoListView.on('@remove', (event) => {
       this.removeTodo(event.detail.value);
+      this.render();
     });
   }
 
