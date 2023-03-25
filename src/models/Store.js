@@ -10,13 +10,13 @@ export default class Store {
 
   fetchTodoItems() {
     const toTodoItem = (_, index) =>
-      this.storage.getItem(this.storage.key(index));
+      JSON.parse(this.storage.getItem(this.storage.key(index)));
 
     return Array.from({ length: this.storage.length }).map(toTodoItem);
   }
 
   addTodoItem(todo) {
-    this.storage.setItem(todo, todo);
-    console.log(todo);
+    const todoInfo = { completed: false, item: todo };
+    this.storage.setItem(todo, JSON.stringify(todoInfo));
   }
 }
