@@ -22,10 +22,12 @@ export default class Controller {
         this.render();
       })
       .on('@dragstart', (event) => {
-        console.log(event.detail.value);
+        this.store.setDragStart(event.detail.value);
       })
       .on('@dragdrop', (event) => {
-        console.log(event.detail.value);
+        this.store.setDragDrop(event.detail.value);
+        this.store.updateTodos();
+        this.render();
       });
   }
 

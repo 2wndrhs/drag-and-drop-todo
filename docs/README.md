@@ -15,11 +15,11 @@
 - [x] `Todo`의 삭제 버튼을 클릭하면 해당 Todo를 로컬 스토리지에서 삭제한다.
 - [x] `Todo`의 삭제 버튼을 클릭하면 store에 삭제된 Todo를 반영한다.
 
-## Draggable 구현
+## Drag & Drop 구현
 
 - [x] 각 ToDo는 Draggble이 가능하다.
 - [x] 각 ToDo는 `dragstart` 이벤트를 감지한다.
 - [x] 각 ToDo는 `dragover` 이벤트를 감지한다.
   - [x] 각 `dragstart` 이벤트의 기본 동작을 막는다.
 - [x] 각 ToDo는 `dragdrop` 이벤트를 감지한다.
-- [ ] `dragstart`인 ToDo와 `dragdrop`인 Todo를 이용해 Todo 리스트를 업데이트한다.
+- [x] `dragstart`인 ToDo와 `dragdrop`인 Todo를 이용해 Todo 리스트를 업데이트한다.

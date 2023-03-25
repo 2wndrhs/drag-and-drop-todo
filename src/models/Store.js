@@ -5,6 +5,8 @@ export default class Store {
     this.storage = storage;
 
     this.todos = this.fetchTodos();
+    this.dragStart = '';
+    this.dragDrop = '';
     console.log(this.todos);
   }
 
@@ -20,15 +22,44 @@ export default class Store {
   }
 
   addOneItem(todo) {
-    const todoInfo = { completed: false, item: todo };
-    this.storage.setItem(todo, JSON.stringify(todoInfo));
+    const todoInfo = { item: todo };
+
     this.todos.push(todoInfo);
+    this.storage.setItem(todo, JSON.stringify(todoInfo));
   }
 
   removeOneItem(todo) {
-    this.storage.removeItem(todo);
-
     const isNotRemovedTodo = (todoInfo) => todoInfo.item !== todo;
     this.todos = this.todos.filter(isNotRemovedTodo);
+
+    this.storage.removeItem(todo);
+  }
+
+  setDragStart(dragStart) {
+    this.dragStart = dragStart;
+  }
+
+  setDragDrop(dragDrop) {
+    this.dragDrop = dragDrop;
+  }
+
+  updateTodos() {
+    this.todos = this.todos.reduce((acc, todo) => {
+      const isDragStart = todo.item === this.dragStart;
+      const isDragDrop = todo.item === this.dragDrop;
+
+      if (isDragStart) {
+        return acc;
+      }
+
+      if (isDragDrop) {
+        acc.push(todo);
+        acc.push({ item: this.dragStart });
+        return acc;
+      }
+
+      acc.push(todo);
+      return acc;
+    }, []);
   }
 }
