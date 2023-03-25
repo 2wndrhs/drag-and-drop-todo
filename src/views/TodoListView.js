@@ -8,7 +8,7 @@ const Template = Object.freeze({
 
   getTodoItem(todo) {
     return `
-    <li class="shadow">
+    <li class="shadow list-view" draggable="true">
       <span>${todo.item}</span>
       <span data-todo="${todo.item}" class="remove-btn">
         <i class="fas fa-times"></i>

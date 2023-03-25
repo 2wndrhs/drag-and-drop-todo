@@ -17,4 +17,4 @@
 
 ## Draggable 구현
 
-- [ ] 각 ToDo는 Draggble이 가능하다.
+- [x] 각 ToDo는 Draggble이 가능하다.
