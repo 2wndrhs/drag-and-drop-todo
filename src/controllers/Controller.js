@@ -14,6 +14,10 @@ export default class Controller {
       this.clearTodoInputForm();
       this.addTodo(event.detail.value);
     });
+
+    this.todoListView.on('@remove', (event) => {
+      this.removeTodo(event.detail.value);
+    });
   }
 
   render() {
@@ -28,5 +32,9 @@ export default class Controller {
 
   addTodo(todo) {
     this.store.addOneItem(todo);
+  }
+
+  removeTodo(todo) {
+    this.store.removeOneItem(todo);
   }
 }

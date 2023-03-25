@@ -23,4 +23,9 @@ export default class Store {
     const todoInfo = { completed: false, item: todo };
     this.storage.setItem(todo, JSON.stringify(todoInfo));
   }
+
+  removeOneItem(todo) {
+    console.log(todo);
+    this.storage.removeItem(todo);
+  }
 }
