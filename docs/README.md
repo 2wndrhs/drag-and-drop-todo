@@ -14,3 +14,7 @@
 - [x] 받아온 `Todos`를 Todo 리스트에 출력한다.
 - [x] `Todo`의 삭제 버튼을 클릭하면 해당 Todo를 로컬 스토리지에서 삭제한다.
 - [x] `Todo`의 삭제 버튼을 클릭하면 store에 삭제된 Todo를 반영한다.
+
+## Draggable 구현
+
+- [ ] 각 ToDo는 Draggble이 가능하다.
