@@ -5,6 +5,7 @@
 - [x] Todo 입력 폼이 위치한다.
 - [x] 엔터를 입력하면 Todo를 로컬 스토리지에 추가한다.
 
-## Todo 출력폼 구현
+## Todo 리스트 구현
 
 - [x] `localStorage`에 저장되어 있는 `TodoItems`를 받아온다.
+- [ ] Todo 리스트는 Todo 입력 폼 아래 위치한다.
