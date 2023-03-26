@@ -51,3 +51,5 @@
   - [Vanilla Javascript로 웹 컴포넌트 만들기](https://junilhwang.github.io/TIL/Javascript/Design/Vanilla-JS-Component/)
 - 부족한 `CSS` 지식..
   - `CSS` 스타일링에 대한 추가적인 학습이 필요할 것 같습니다.
+- Todo의 삭제 버튼의 `X` 아이콘을 정확히 클릭하면 삭제가 되지 않는 것
+  - `이벤트 버블링`으로 인해 상위 요소에서 이벤트가 감지되어 삭제가 될 것이라 예상했는데 추가적인 학습이 필요할 것 같습니다 🥲
