@@ -24,7 +24,9 @@ export function delegate(target, eventName, selector, handler) {
     const potentialElements = qsAll(selector, target);
 
     potentialElements.forEach((potentialElement) => {
-      if (potentialElement === event.target) {
+      const isPotentialElement = potentialElement === event.target;
+
+      if (isPotentialElement) {
         return handler.call(event.target, event);
       }
     });
